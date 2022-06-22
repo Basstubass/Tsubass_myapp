@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Lobster&family=PT+Serif:ital@1&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Hello</title>
+</head>
+<body>
+    <div class="slide-header">
+        <div class="slide">
+            <video id="video_slide" src="Pexels_Videos_2877.mp4" loop autoplay muted></video> 
+        </div>
+        <div class="site_title">
+            <h1 class="site_title_h1">Tsubasu</h1>
+            <p class="site_title_p">Protforio Web Site.</p>
+        </div>
+    </div>
+    <main class="main">
+        <header>
+            <div class="header">
+                <h1>Tsubasu</h1>
+                <i class="fa-solid fa-bars"></i>
+                <ul class="head_list">
+                    <li>Home</li>
+                    <li>Protforio</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="app_icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+        </header>
+    </main>
+</body>
+
+    <script>
+        const pics_src = ["Pexels_Videos_2921.mp4","production_ID_4935659.mp4","Pexels_Videos_2877.mp4"];
+        let num = -1;
+            function slideshow_timer(){
+                if (num === 2){
+                    num = 0;
+                } 
+                else {
+                    num ++;
+                }
+            document.getElementById("video_slide").src = pics_src[num];
+            }
+            
+            setInterval(slideshow_timer, 14000);
+
+        
+            //////アニメーション///////
+            let fadein_ani = document.querySelector('.slide-header');
+            let main_fade = document.querySelector('.main')
+            window.addEventListener('scroll', () => {
+                const rect = fadein_ani.getBoundingClientRect().top;
+                const scroll = window.pageYOffset || document.documentElement.scrollTop;
+                // const offset = rect + scroll;
+                // const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+                if (scroll > 450) {
+                    fadein_ani.classList.add('scroll-in');
+                }
+                if (scroll < 450) {
+                    fadein_ani.classList.remove('scroll-in');
+                    fadein_ani.classList.add('scroll-out');
+                }
+                if (scroll > 190) {
+                    main_fade.classList.add('main-out');
+                }
+                if (scroll < 190) {
+                    main_fade.classList.remove('main-out');
+                }
+
+            })
+        
+    </script>
+</html>

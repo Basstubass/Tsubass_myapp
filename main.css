@@ -1,0 +1,128 @@
+body{
+	margin: 0;
+	background-color: black;
+	color: white;
+}
+
+
+.slide {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+}
+.slide video {
+	object-fit:contain;
+	filter: grayscale(90%);
+	width: 100vw;
+    height: 100vh;
+}
+.site_title{
+	position: absolute;
+	font-family: 'Caveat', cursive;
+	top: 40%;
+	left: 50%;
+	-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.site_title_h1{
+	font-size: 130px;
+	margin-bottom: 30px;
+	animation-name: fadein;
+	animation-duration: 3s;
+	color: black;
+}
+.site_title_p{
+	width: 210px;
+	font-size: 24px;
+	margin-left: 20%;
+	margin-top: 20px;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	letter-spacing: .1em;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 1px solid rgba(255,255,255,.5);
+	animation: typing 1.5s steps(10),
+		blink .5s steps(1) infinite alternate;
+}
+.scroll-in{
+	opacity: 0;
+	transition: 2s;
+}
+.scroll-out{
+	transition: 2s;
+}
+
+
+@keyframes typing{
+  0% {width: 0;}
+}
+@keyframes blink{
+  50% {border-right-color: transparent;}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+main{
+	background-color: black;
+}
+.main{
+	height: 900px;
+	background-color: black;
+	opacity: 0;
+	transition: 2s;
+	transform: translate(0, 150px);
+
+}
+.main-out{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.header{
+	background-color: rgb(255, 255, 255);
+	color: black;
+	height: 900px;
+	width: 120px;
+	position: absolute;
+	font-family: 'Caveat', cursive;
+}
+.head_list{
+	margin-top: 50px;
+}
+.header li{
+	list-style: none;
+	font-size: 25px;
+	margin-left: 20%;
+	margin-top: 40%;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+.header h1{
+	font-size: 38px;
+	margin-top: 40px;
+	margin-left: 5px;
+}
+.header i{
+	padding-top: 20px;
+	margin-left: 35%;
+	font-size: 30px;
+}
+.app_icon{
+	margin-top: 30%;
+}
+.app_icon i{
+	margin-top: 10px;
+	font-size: 25px;
+}
