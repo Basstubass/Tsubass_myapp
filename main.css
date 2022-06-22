@@ -126,3 +126,8 @@ ul {
 	margin-top: 10px;
 	font-size: 25px;
 }
+
+.main_body{
+	height: 900px;
+	background-color: aquamarine;
+}
